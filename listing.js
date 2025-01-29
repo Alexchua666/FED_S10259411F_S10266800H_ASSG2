@@ -3,8 +3,18 @@ const account = document.querySelector('.account');
 const dropdown = document.querySelector('.dropdown');
 const arrow = document.querySelector('.arrow');
 
+function positionDropdown() {
+    const accountRect = account.getBoundingClientRect();
+    dropdown.style.top = `${accountRect.bottom}px`;
+    dropdown.style.left = `${accountRect.left}px`;
+}
+
+positionDropdown();
+
+window.addEventListener('resize', positionDropdown);
+
 account.addEventListener('click', function(event) {
-    event.stopPropagation(); // Prevent click event from propagating
+    event.stopPropagation();
 
     const isDropdownOpen = dropdown.style.display === 'block';
     dropdown.style.display = isDropdownOpen ? 'none' : 'block';
@@ -15,7 +25,7 @@ account.addEventListener('click', function(event) {
 document.addEventListener('click', function(event) {
     if (!account.contains(event.target)) {
         dropdown.style.display = 'none';
-        arrow.classList.remove('rotate'); // Reset arrow rotation
+        arrow.classList.remove('rotate');
     }
 });
 

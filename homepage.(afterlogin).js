@@ -41,10 +41,20 @@ const account = document.querySelector('.account');
 const dropdown = document.querySelector('.dropdown');
 const arrow = document.querySelector('.arrow');
 
-account.addEventListener('click', function(event) {
-    event.stopPropagation(); // Prevent click event from propagating
+function positionDropdown() {
+    let accountRect = account.getBoundingClientRect();
+    dropdown.style.top = `${accountRect.bottom}px`;
+    dropdown.style.left = `${accountRect.left}px`;
+}
 
-    const isDropdownOpen = dropdown.style.display === 'block';
+positionDropdown();
+
+window.addEventListener('resize', positionDropdown);
+
+account.addEventListener('click', function(event) {
+    event.stopPropagation();
+
+    let isDropdownOpen = dropdown.style.display === 'block';
     dropdown.style.display = isDropdownOpen ? 'none' : 'block';
 
     arrow.classList.toggle('rotate', !isDropdownOpen);
@@ -53,6 +63,6 @@ account.addEventListener('click', function(event) {
 document.addEventListener('click', function(event) {
     if (!account.contains(event.target)) {
         dropdown.style.display = 'none';
-        arrow.classList.remove('rotate'); // Reset arrow rotation
+        arrow.classList.remove('rotate');
     }
 });

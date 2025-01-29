@@ -27,39 +27,27 @@
                 <strong>Username</strong>
                 <img src="Images/arrowdown.svg" alt="arrowdown" class="arrow">
                 <div class="dropdown">
-                    <a href="#"><img src="Images/ProfilePerson.svg">Profile</a>
-                    <a href="#"><img src="Images/shoppingBag.svg">My Purchases</a>
-                    <a href="#"><img src="Images/heart(likes).svg">Likes</a>
-                    <a href="#"><img src="Images/Setting.svg">Settings</a>
+                    <a href="profile.html"><img src="Images/ProfilePerson.svg">Profile</a>
+                    <a href="purchases.html"><img src="Images/shoppingBag.svg">My Purchases</a>
+                    <a href="likes.html"><img src="Images/heart(likes).svg">Likes</a>
+                    <a href="settings.html"><img src="Images/Setting.svg">Settings</a>
                     <a href="homepage(prelogin).html"><img src="Images/Logout.svg">Logout</a>
                 </div>
             </div>
 
             <div class="actions">   
-                <img src="Images/heart(likes).svg" alt="Likes">
-                <img src="Images/notificationBell.svg" alt="Likes">
-                <img src="Images/chat.svg" alt="Likes">                
+                <a href="likes.html"><img src="Images/heart(likes).svg" alt="Likes"></a>
+                <a href="cart.html"><img src="Images/shoppingCart.svg" alt="shoppingCart"></a>
+                <img src="Images/notificationBell.svg" alt="notificationBell">
+                <a href="chats.html"><img src="Images/chat.svg" alt="chat"></a>                
             </div> 
-            <button class="Sell">Sell</button>
+            <a href="listing.html"><button class="Sell">Sell</button></a>
         </div>
     </header>
     
     <main class="main">
-        <section class="advertisment">
-            <button class="prev" id="prevBtn" onclick="prevImg()">&#10094;</button>
-            <div class="slider-container">
-                <div class="slider">
-                    <img src="Images/laptopPoster.avif" alt="Laptop Poster">
-                    <img src="Images/phones.avif" alt="Phones">
-                    <img src="Images/laptopPoster.avif" alt="Laptop Poster">
-                    <img src="Images/phones.avif" alt="Laptop Poster">
-                </div>
-            </div>
-            <button class="next" id="nextBtn" onclick="nextImg()">&#10095;</button>
-        </section>
-
         <section>
-            <h1>Best Deals</h1>
+            <h1>Likes</h1>
             <section class="products">
                 <div class="product-card">
                     <div class="seller">
@@ -69,8 +57,12 @@
                     <div class="product-image"><img src="Images/laptop1.jpg"></div>
                     <div class="product-details">
                         <h3>Product Name</h3>
-                        <p>$100</p>
-                        <button>View Details</button>
+                        <h4>$100</h4>
+                        <p>Lightly Used</p>
+                        <div class="likes">   
+                            <img src="Images/heart(likes).svg" alt="Likes" class="like">
+                            <p>100</p>
+                        </div>  
                     </div>
                 </div>
     
@@ -82,21 +74,12 @@
                     <div class="product-image"><img src="Images/laptop1.jpg"></div>
                     <div class="product-details">
                         <h3>Product Name</h3>
-                        <p>$100</p>
-                        <button>View Details</button>
-                    </div>
-                </div>
-    
-                <div class="product-card">
-                    <div class="seller">
-                        <div class="circle"></div>
-                        <p>Username</p>
-                    </div>
-                    <div class="product-image"><img src="Images/laptop1.jpg"></div>
-                    <div class="product-details">
-                        <h3>Product Name</h3>
-                        <p>$100</p>
-                        <button>View Details</button>
+                        <h4>$100</h4>
+                        <p>Lightly Used</p>
+                        <div class="likes">   
+                            <img src="Images/heart(likes).svg" alt="Likes" class="like">
+                            <p>100</p>
+                        </div>  
                     </div>
                 </div>
 
@@ -108,8 +91,12 @@
                     <div class="product-image"><img src="Images/laptop1.jpg"></div>
                     <div class="product-details">
                         <h3>Product Name</h3>
-                        <p>$100</p>
-                        <button>View Details</button>
+                        <h4>$100</h4>
+                        <p>Lightly Used</p>
+                        <div class="likes">   
+                            <img src="Images/heart(likes).svg" alt="Likes" class="like">
+                            <p>100</p>
+                        </div>  
                     </div>
                 </div>
 
@@ -121,8 +108,29 @@
                     <div class="product-image"><img src="Images/laptop1.jpg"></div>
                     <div class="product-details">
                         <h3>Product Name</h3>
-                        <p>$100</p>
-                        <button>View Details</button>
+                        <h4>$100</h4>
+                        <p>Lightly Used</p>
+                        <div class="likes">   
+                            <img src="Images/heart(likes).svg" alt="Likes" class="like">
+                            <p>100</p>
+                        </div>  
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="seller">
+                        <div class="circle"></div>
+                        <p>Username</p>
+                    </div>
+                    <div class="product-image"><img src="Images/laptop1.jpg"></div>
+                    <div class="product-details">
+                        <h3>Product Name</h3>
+                        <h4>$100</h4>
+                        <p>Lightly Used</p>
+                        <div class="likes">   
+                            <img src="Images/heart(likes).svg" alt="Likes" class="like">
+                            <p>100</p>
+                        </div>  
                     </div>
                 </div>
             </section>

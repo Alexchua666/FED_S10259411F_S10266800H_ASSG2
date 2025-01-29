@@ -163,10 +163,14 @@ main {
     font-weight: bold;
     padding: 0.5rem 1rem;
     font-size: large;
+    background-color: black;
+    color: #ffffff;
+    border-radius: 0.25rem;
 }
 
 .main-header button:hover {
     cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.808);
 }
 
 .listing .content {
@@ -345,7 +349,7 @@ input:not(:placeholder-shown) + label {
     right: 0;
 }
 
-.listing button:hover {
+button:hover {
     background-color: rgba(0, 0, 0, 0.808);
 }
 
