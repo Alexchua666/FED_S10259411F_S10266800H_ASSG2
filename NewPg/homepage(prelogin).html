@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MokeSell</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="popup">
+        <form class="login-form">
+            <div class="popup-header">
+                <h1>MokeSell</h1>
+                <img src="Images/'X' icon.png" alt="Close" class="close">
+            </div>
+            <h1>Login</h1>
+            <button class="google"><img src="Images/google.png" alt="Google">Google</button>
+            <strong>or</strong>
+            <div class="input-container">
+                <input type="text" id="username" placeholder=" ">
+                <label for="username">Username or email</label>
+            </div>
+            <div class="input-container">
+                <input type="password" id="password" placeholder=" ">
+                <label for="password">Password</label>
+            </div>
+            <button type="submit">Login</button>
+            <p>Don't have an account? <a href="#" class="switch-to-signup">Sign Up</a></p>
+        </form>
+
+        <form class="signup-form">
+            <div class="popup-header">
+                <h1>MokeSell</h1>
+                <img src="Images/'X' icon.png" alt="Close" class="close">
+            </div>
+            <h1>Sign Up</h1>
+            <button class="google"><img src="Images/google.png" alt="Google">Google</button>
+            <strong>or</strong>
+            <div class="input-container">
+                <input type="text" id="username" placeholder=" ">
+                <label for="username">Username</label>
+            </div>
+            <div class="input-container">
+                <input type="email" id="email" placeholder=" ">
+                <label for="email">Email</label>
+            </div>
+            <div class="input-container">
+                <input type="password" id="password" placeholder=" ">
+                <label for="password">Password</label>
+            </div>
+            <div class="input-container">
+                <input type="confirm_password" id="confirm_password" placeholder=" ">
+                <label for="confirm_password">Confirm Password</label>
+            </div>
+            <button type="submit">Login</button>
+            <p>Already have an account? <a href="#" class="switch-to-login">Login</a></p>
+        </form>
+    </section>
+
+    <header>
+        <div class="header-container">
+            <div class="header-title">MokeSell</div>
+            <div class="categories">
+                <strong>Smartphones</strong>
+                <strong>Tablets</strong>
+                <strong>Laptops</strong>
+                <strong>Accessories</strong>
+            </div>
+
+            <div class="search-bar">
+                <input type="text" class="search-input" placeholder="Search items, brands, or categories">
+                <button class="search-button">Search</button>
+            </div>
+
+            <div class="auth-buttons">
+                <button class="login">Login</button>
+                <button class="signup">Sign Up</button>
+            </div>
+        </div>
+    </header>
+    
+    <main class="main">
+        <section class="advertisment">
+            <button class="prev" id="prevBtn" onclick="prevImg()">&#10094;</button>
+            <div class="slider-container">
+                <div class="slider">
+                    <img src="Images/laptopPoster.avif" alt="Laptop Poster">
+                    <img src="Images/phones.avif" alt="Phones">
+                    <img src="Images/laptopPoster.avif" alt="Laptop Poster">
+                    <img src="Images/phones.avif" alt="Laptop Poster">
+                </div>
+            </div>
+            <button class="next" id="nextBtn" onclick="nextImg()">&#10095;</button>
+        </section>
+
+        <section>
+            <h1>Best Deals</h1>
+            <section class="products">
+                <div class="product-card">
+                    <div class="product-image"></div>
+                    <div class="product-details">
+                        <h3>Product Name</h3>
+                        <p>$100</p>
+                        <button>View Details</button>
+                    </div>
+                </div>
+    
+                <div class="product-card">
+                    <div class="product-image"></div>
+                    <div class="product-details">
+                        <h3>Product Name</h3>
+                        <p>$100</p>
+                        <button>View Details</button>
+                    </div>
+                </div>
+    
+                <div class="product-card">
+                    <div class="product-image"></div>
+                    <div class="product-details">
+                        <h3>Product Name</h3>
+                        <p>$100</p>
+                        <button>View Details</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image"></div>
+                    <div class="product-details">
+                        <h3>Product Name</h3>
+                        <p>$100</p>
+                        <button>View Details</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image"></div>
+                    <div class="product-details">
+                        <h3>Product Name</h3>
+                        <p>$100</p>
+                        <button>View Details</button>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2025 MokeSell. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Contact Us</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>

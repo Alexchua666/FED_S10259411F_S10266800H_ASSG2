@@ -1,0 +1,361 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+}
+
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+header .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.header-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1f2937;
+}
+
+.categories {
+    display: flex;
+    gap: 1rem;
+}
+
+.search-bar {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.search-input {
+    padding: 0.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+    width: 16rem;
+}
+
+.search-button {
+    background-color: #1f2937;
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+.auth-buttons button {
+    margin-left: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+.auth-buttons .login {
+    background-color: transparent;
+    border: 1px solid #1f2937;
+    color: #1f2937;
+}
+
+.auth-buttons .signup {
+    background-color: #1f2937;
+    color: #ffffff;
+    }
+
+.main {
+    margin: 0 auto;
+    max-width: 1250px;
+    margin: 2rem auto;
+    gap: 1rem;
+}
+
+.advertisment {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider-container {
+    overflow: hidden;
+    flex: 1;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 1rem;
+}
+
+.slider img {
+    width: calc(50% - 0.5rem);
+    flex-shrink: 0;
+    border-radius: 1rem;
+}
+
+.advertisment button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+button#prevBtn {
+    left: 0;
+}
+
+button#nextBtn {
+    right: 0;
+}
+
+button:disabled {
+    display: none;
+}
+
+
+.products {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 2rem 0;
+    gap: 1rem;
+}
+
+.product-card {
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;    
+}
+
+.product-image {
+    background-color: #e5e7eb;
+    height: 12rem;
+}
+
+.product-details {
+padding: 1rem;
+}
+.product-details h3 {
+font-size: 1rem;
+font-weight: 600;
+margin: 0;
+}
+.product-details p {
+font-size: 0.875rem;
+color: #6b7280;
+}
+.product-details button {
+width: 100%;
+padding: 0.5rem;
+background-color: #1f2937;
+color: #ffffff;
+border: none;
+border-radius: 0.25rem;
+margin-top: 0.5rem;
+cursor: pointer;
+}
+footer {
+background-color: #1f2937;
+color: #ffffff;
+padding: 1rem;
+margin-top: 2rem;
+}
+.footer-container {
+max-width: 1200px;
+margin: 0 auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.footer-links a {
+color: #9ca3af;
+margin-left: 1rem;
+text-decoration: none;
+}
+.footer-links a:hover {
+text-decoration: underline;
+}
+
+.popup {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;    
+    height: 100%;
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 100;
+    padding: 1rem;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+form h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.popup-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 360px;
+}
+
+.popup-header img{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.google{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 360px;
+    font-weight: bold;
+    cursor: pointer;
+    gap: 1.3em;
+    border: 1px solid rgb(128, 128, 128);
+    padding: 12px 15px;
+    background-color: white;
+}
+
+.google:hover {
+    background-color: rgb(231, 231, 231);
+}
+
+.google img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.input-container {
+    position: relative;
+    width: 100%;
+    max-width: 360px;
+    display: flex;
+    align-items: center;
+}
+
+input {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 1px solid rgb(128, 128, 128);
+    border-radius: 5px;
+    outline: none;
+    transition: 0.3s ease;
+    background-color: white;
+}
+
+input:focus,
+input:not(:placeholder-shown) {
+    border-color: grey;
+}
+
+label {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: grey;
+    pointer-events: none;
+    transition: 0.3s ease;
+    background-color: white;
+    padding: 0 5px;
+}
+
+input:focus + label,
+input:not(:placeholder-shown) + label {
+    top: 0;
+    font-size: 12px;
+    color: rgb(128, 128, 128);
+    padding: 0 5px;
+}
+
+.popup button[type="submit"] {
+    width: 100%;
+    max-width: 360px;
+    padding: 12px;
+    background-color: #1f2937;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.popup button[type='submit']:hover {
+    background-color: #374151;
+}
+
+p {
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+p a {
+    color: #4285F4;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+body.noscroll {
+    overflow: hidden;
+}
+
+form .signup-form {
+    display: none;
+}
+
+form .login-form {
+    display: none;
+}
+

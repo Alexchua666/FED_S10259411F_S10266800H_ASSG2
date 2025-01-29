@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MokeSell</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="header-title">MokeSell</div>
+            <div class="categories">
+                <strong>Smartphones</strong>
+                <strong>Tablets</strong>
+                <strong>Laptops</strong>
+                <strong>Accessories</strong>
+            </div>
+
+            <div class="search-bar">
+                <input type="text" class="search-input" placeholder="Search items, brands, or categories">
+                <button class="search-button">Search</button>
+            </div>
+
+            <div class="auth-buttons">
+                <button class="login">Login</button>
+                <button class="signup">Sign Up</button>
+            </div>
+        </div>
+    </header>
+    
+    <main class="main">
+        <section class="advertisment">
+            <button class="prev" id="prevBtn" onclick="prevImg()">&#10094;</button>
+            <div class="slider-container">
+                <div class="slider">
+                    <img src="Images/laptopPoster.avif" alt="Laptop Poster">
+                    <img src="Images/phones.avif" alt="Phones">
+                    <img src="Images/laptopPoster.avif" alt="Laptop Poster">
+                    <img src="Images/phones.avif" alt="Laptop Poster">
+                </div>
+            </div>
+            <button class="next" id="nextBtn" onclick="nextImg()">&#10095;</button>
+        </section>
+
+        <section>
+            <h1>Best Deals</h1>
+            <section class="products">
+                <div class="product-card">
+                    <div class="product-image"></div>
+                    <div class="product-details">
+                        <h3>Product Name</h3>
+                        <p>$100</p>
+                        <button>View Details</button>
+                    </div>
+                </div>
+    
+                <div class="product-card">
+                    <div class="product-image"></div>
+                    <div class="product-details">
+                        <h3>Product Name</h3>
+                        <p>$100</p>
+                        <button>View Details</button>
+                    </div>
+                </div>
+    
+                <div class="product-card">
+                    <div class="product-image"></div>
+                    <div class="product-details">
+                        <h3>Product Name</h3>
+                        <p>$100</p>
+                        <button>View Details</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image"></div>
+                    <div class="product-details">
+                        <h3>Product Name</h3>
+                        <p>$100</p>
+                        <button>View Details</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image"></div>
+                    <div class="product-details">
+                        <h3>Product Name</h3>
+                        <p>$100</p>
+                        <button>View Details</button>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2025 MokeSell. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Contact Us</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>
