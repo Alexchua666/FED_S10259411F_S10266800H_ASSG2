@@ -1,0 +1,351 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+}
+
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+header .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1500px;
+    width: 100%;
+}
+
+
+.header-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1f2937;
+    text-decoration: none;
+}
+
+.header-title:hover {
+    cursor: pointer;
+}
+
+.categories {
+    display: flex;
+    gap: 1rem;
+}
+
+.categories strong {
+    padding: 1.5rem 0.2rem;
+    cursor: pointer;
+}
+
+.categories strong:hover {
+    background: #f3f4f6;
+}
+
+.search-bar {
+    display: flex;
+}
+
+.search-input {
+    padding: 0.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+    width: 27rem;
+}
+
+.search-button, .Sell { 
+    background-color: #1f2937;
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+.account {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.account:hover {
+    background-color: #f3f4f6;
+    cursor: pointer;
+}
+
+.account .profilepic {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #d1d5db;
+}
+
+.actions{
+    display: flex;
+}
+
+.actions img {
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 1.3rem 1rem;
+}
+
+.actions img:hover {
+    cursor: pointer;
+    background-color: #f3f4f6;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    right: 0;
+    width: 200px;
+    z-index: 10;
+    top: 4rem;
+    right: 27.4em;
+}
+
+.dropdown a {
+    padding: 1rem;
+    display: block;
+    color: #1f2937;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.dropdown a:hover {
+    background-color: #f3f4f6;
+}
+
+.arrow {
+    transition: transform 0.3s ease-in-out;
+}
+
+.arrow.rotate {
+    transform: rotate(180deg);
+}
+
+.auth-buttons .signup {
+    background-color: #1f2937;
+    color: #ffffff;
+}
+
+main {
+    margin: 0 auto;
+    max-width: 1500px;
+    margin: 2rem auto;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header button {
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    font-size: large;
+}
+
+.main-header button:hover {
+    cursor: pointer;
+}
+
+.listing .content {
+    display: flex;
+    height: auto;
+    gap: 1rem;
+}
+
+.listing sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 40%;
+    height: fit-content;
+    background-color: white;
+    box-shadow: #1f2937;
+}
+
+.uploadphoto-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 40vh;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    margin: 1.5em;
+    border: 2px dashed #ccc;
+}
+
+.uploadphoto-container img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.uploadphoto-container.dragover {
+    background-color: #f0f0f0;
+    border-color: #555;
+}
+
+.preview-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 29px;
+    padding: 2em;
+}
+
+.image-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.image-wrapper img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
+.delete-btn {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.iteminfo {
+    width: calc(60% - 1rem);
+    margin: 0 auto;
+    height: fit-content;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.itemContainer {
+    margin: 0 auto;
+    padding: 2em;
+    width: 100%;
+}
+
+.itemContainer input {
+    width: calc(100% - 7.5em);
+    align-self: flex-start;
+    padding: 12px 16px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.input-container select {
+    appearance: none;
+    background-image: url('Images/arrowdown.svg');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    padding: 12px 30px 12px 16px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    width: calc(100% - 5em);
+}
+
+input:focus {
+    border-color: black;
+}
+
+.iteminfo label {
+    position: absolute;
+    left: 15px;
+    top: 12px;
+    font-size: 14px; /* Adjusted to match your existing font size */
+    color: #999;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    background-color: white;
+    padding: 0 5px;
+}
+
+input:focus + label,
+input:not(:placeholder-shown) + label {
+    top: -8px;
+    font-size: 12px;
+    color: black;
+}
+
+.iteminfo input#description {
+    padding: 12px 16px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    width: calc(100% - 7.5em);
+    height: 100px;
+    resize: vertical;
+}
+
+.iteminfo button {
+    width: 20%;
+    margin-bottom: 2rem;
+    padding: 12px;
+    font-size: 1.5em;
+    font-weight: bold;
+    background-color: black;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    right: 0;
+}
+
+.listing button:hover {
+    background-color: rgba(0, 0, 0, 0.808);
+}
+

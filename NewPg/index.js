@@ -37,23 +37,29 @@ function updateSlider() {
 updateButtons();
 
 //Login & Signup (Popup)
+let scrollPosition = 0;
 document.querySelector('.login').addEventListener('click', function () {
     document.querySelector('.popup').style.display = 'flex';
     document.querySelector('.login-form').style.display = 'flex';
     document.querySelector('.signup-form').style.display = 'none';
+    scrollPosition = window.scrollY;
+    document.querySelector('.popup').style.top = scrollPosition + 'px';
+    disableScroll();
 });
 
 document.querySelector('.signup').addEventListener('click', function () {
     document.querySelector('.popup').style.display = 'flex';
     document.querySelector('.signup-form').style.display = 'flex';
     document.querySelector('.login-form').style.display = 'none';
+    scrollPosition = window.scrollY;
+    document.querySelector('.popup').style.top = scrollPosition + 'px';
+    disableScroll();
 });
 
 document.querySelectorAll('.close').forEach(closeBtn => {
     closeBtn.addEventListener('click', function () {
-        document.querySelector('.popup').style.display = 'none';
-        document.querySelector('.login-form').style.display = 'none';
-        document.querySelector('.signup-form').style.display = 'none';
+        closePopup();
+        enableScroll();
     });
 });
 
@@ -72,6 +78,7 @@ document.querySelector('.switch-to-login').addEventListener('click', function (e
 document.querySelector('.popup').addEventListener('click', function (event) {
     if (event.target === this) {
         closePopup();
+        enableScroll();
     }
 });
 
@@ -80,3 +87,12 @@ function closePopup() {
     document.querySelector('.login-form').style.display = 'none';
     document.querySelector('.signup-form').style.display = 'none';
 }
+
+function disableScroll() {
+    document.body.style.overflow = 'hidden';
+}
+
+function enableScroll() {
+    document.body.style.overflow = '';
+}
+
