@@ -39,7 +39,6 @@ uploadInput.addEventListener('change', function(event) {
     handleFiles(event.target.files);
 });
 
-// Handle file drop
 dropArea.addEventListener('dragover', (event) => {
     event.preventDefault();
     dropArea.classList.add('dragover');
@@ -55,7 +54,6 @@ dropArea.addEventListener('drop', (event) => {
     handleFiles(event.dataTransfer.files);
 });
 
-// Process and display images
 function handleFiles(files) {
     Array.from(files).forEach(file => {
         const reader = new FileReader();

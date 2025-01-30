@@ -43,3 +43,13 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+let profilePics = document.querySelectorAll(".profilepic"); // Select all profile pictures
+    let inputfile = document.getElementById("inputfile");
+
+    inputfile.addEventListener("change", function () {
+        if (this.files.length > 0) {
+            let newPicUrl = URL.createObjectURL(this.files[0]);
+            profilePics.forEach(pic => pic.src = newPicUrl); // Update all profile pictures
+        }
+    });

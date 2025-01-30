@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile - MokeSell</title>
+    <title>MokeSell - Edit Profile</title>
     <link rel="stylesheet" href="pagesStyling(afterlogin).css">
 </head>
 <body>
@@ -46,8 +46,57 @@
     </header>
 
     <main class="setting">
-        
+        <sidebar>
+            <a href="settings.html" class="active">Profile</a>
+            <a href="changepassword.html">Change Password</a>
+        </sidebar>
+
+        <content>
+            <h1>Edit Profile</h1>
+            <h2>Profile Picture</h2>
+            <section class="profilepic-container">
+                <img src="Images/DefaultProfile.png" class="profilepic" alt="Profile Picture">
+                <div>
+                    <p>Clear frontal face photos are an important way for buyers and sellers to learn about each other</p>
+                    <label for="inputfile">Upload a photo</label>
+                    <input type="file" id="inputfile" name="profilepic" accept="image/png, image/jpeg">    
+                </div>
+            </section>
+
+            <h2>Public Information</h2>
+            <section class="profileInformation">  
+                <div class="input-container">
+                    <input type="text" id="username" placeholder="" >
+                    <label for="username">Username</label>
+                </div>             
+                <div class="input-container">
+                    <input type="text" id="firstName" placeholder="" >
+                    <label for="firstName">First Name</label>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="lastName" placeholder="" >
+                    <label for="lastName">Last Name</label>
+                </div>
+                <div class="input-container">
+                    <input type="bio" id="bio" placeholder="">
+                    <label for="bio">Bio</label>
+                </div>
+            </section>
+
+            <button class="save">Save Changes</button>
+        </content>
     </main>
+
+    <footer>
+        <div class="footer-container">
+          <p>&copy; 2025 MokeSell. All rights reserved.</p>
+          <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact Us</a>
+          </div>
+        </div>
+    </footer>
 
     <script src="profile.js"></script>
 </body>
