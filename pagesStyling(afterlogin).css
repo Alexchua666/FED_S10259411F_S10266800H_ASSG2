@@ -353,3 +353,111 @@ button:hover {
     background-color: rgba(0, 0, 0, 0.808);
 }
 
+.main-header h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #1f2937;
+}
+
+.purchases-nav {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 2rem;
+}
+
+.purchases-nav h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.purchases-nav h2:hover,
+.purchases-nav h2.active {
+    color: #1f2937;
+    border-bottom: 3px solid #1f2937;
+}
+
+.purchases-content {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.purchases-nav h2 {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.purchases-nav h2.active {
+    color: #1f2937;
+    border-bottom: 2px solid #1f2937;
+}
+
+.profile-page {
+    max-width: 900px;
+    margin: 2rem auto;
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile-pic-container {
+    position: relative;
+    padding: 0.5em;
+    padding-right: 0;
+}
+
+.profile-pic {
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #1f2937;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: 0.5rem;
+}
+
+.profile-info h1{
+    margin: 0;
+    font-size: 1.5rem;
+    color: #1f2937;
+}
+
+.profile-info p {
+    margin: 0;
+}
+
+.profile-details{
+    text-decoration: none;
+}
+
+.profile-details:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    border-radius: 5px;
+}
+

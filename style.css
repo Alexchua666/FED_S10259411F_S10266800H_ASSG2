@@ -176,7 +176,6 @@ header .header-container {
 
 .slider-container {
     overflow: hidden;
-    flex: 1;
 }
 
 .slider {
@@ -186,8 +185,7 @@ header .header-container {
 }
 
 .slider img {
-    width: calc(50% - 0.5rem);
-    flex-shrink: 0;
+    width: calc(50% - 1rem);
     border-radius: 1rem;
 }
 
@@ -215,7 +213,6 @@ button#nextBtn {
 button:disabled {
     display: none;
 }
-
 
 .products {
     display: flex;
@@ -490,4 +487,3 @@ form .signup-form {
 form .login-form {
     display: none;
 }
-

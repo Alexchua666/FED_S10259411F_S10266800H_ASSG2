@@ -1,3 +1,34 @@
+// Dropdown menu
+const account = document.querySelector('.account');
+const dropdown = document.querySelector('.dropdown');
+const arrow = document.querySelector('.arrow');
+
+function positionDropdown() {
+    let accountRect = account.getBoundingClientRect();
+    dropdown.style.top = `${accountRect.bottom}px`;
+    dropdown.style.left = `${accountRect.left}px`;
+}
+
+positionDropdown();
+
+window.addEventListener('resize', positionDropdown);
+
+account.addEventListener('click', function(event) {
+    event.stopPropagation();
+
+    let isDropdownOpen = dropdown.style.display === 'block';
+    dropdown.style.display = isDropdownOpen ? 'none' : 'block';
+
+    arrow.classList.toggle('rotate', !isDropdownOpen);
+});
+
+document.addEventListener('click', function(event) {
+    if (!account.contains(event.target)) {
+        dropdown.style.display = 'none';
+        arrow.classList.remove('rotate');
+    }
+});
+
 //Image 'Slider'
 const slider = document.querySelector('.slider');
 const prevBtn = document.getElementById('prevBtn');
@@ -35,34 +66,3 @@ function updateSlider() {
 }
 
 updateButtons();
-
-// Dropdown menu
-const account = document.querySelector('.account');
-const dropdown = document.querySelector('.dropdown');
-const arrow = document.querySelector('.arrow');
-
-function positionDropdown() {
-    let accountRect = account.getBoundingClientRect();
-    dropdown.style.top = `${accountRect.bottom}px`;
-    dropdown.style.left = `${accountRect.left}px`;
-}
-
-positionDropdown();
-
-window.addEventListener('resize', positionDropdown);
-
-account.addEventListener('click', function(event) {
-    event.stopPropagation();
-
-    let isDropdownOpen = dropdown.style.display === 'block';
-    dropdown.style.display = isDropdownOpen ? 'none' : 'block';
-
-    arrow.classList.toggle('rotate', !isDropdownOpen);
-});
-
-document.addEventListener('click', function(event) {
-    if (!account.contains(event.target)) {
-        dropdown.style.display = 'none';
-        arrow.classList.remove('rotate');
-    }
-});
