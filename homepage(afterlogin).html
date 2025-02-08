@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MokeSell - Home</title>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+    rel="stylesheet"
+    />
+    <link rel="stylesheet" href="filter.css"/>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
     <header>
         <div class="header-container">
             <a href="homepage(afterlogin).html" class="header-title">MokeSell</a>
@@ -17,9 +24,13 @@
                 <strong>Accessories</strong>
             </div>
 
-            <div class="search-bar">
-                <input type="text" class="search-input" placeholder="Search items, brands, or categories">
-                <button class="search-button">Search</button>
+            <div class="wrapper">
+                <div id="search-container">
+                    <input type="search" id="search-input"
+                    placeholder="Search items, brands, or categories"
+                    />
+                    <button id="search">Search</button>
+                </div>
             </div>
 
             <div class="account">     
@@ -59,96 +70,28 @@
             <button class="next" id="nextBtn" onclick="nextImg()">&#10095;</button>
         </section>
 
-        <section>
-            <h1>Best Deals</h1>
-            <section class="products">
-                <div class="product-card">
-                    <div class="seller">
-                        <div class="circle"></div>
-                        <p>Username</p>
-                    </div>
-                    <div class="product-image"><img src="Images/laptop1.jpg"></div>
-                    <div class="product-details">
-                        <h3>Product Name</h3>
-                        <h4>$100</h4>
-                        <p>Lightly Used</p>
-                        <div class="likes">   
-                            <img src="Images/heart(likes).svg" alt="Likes" class="like">
-                            <p>100</p>
-                        </div>  
-                    </div>
-                </div>
-    
-                <div class="product-card">
-                    <div class="seller">
-                        <div class="circle"></div>
-                        <p>Username</p>
-                    </div>
-                    <div class="product-image"><img src="Images/laptop1.jpg"></div>
-                    <div class="product-details">
-                        <h3>Product Name</h3>
-                        <h4>$100</h4>
-                        <p>Lightly Used</p>
-                        <div class="likes">   
-                            <img src="Images/heart(likes).svg" alt="Likes" class="like">
-                            <p>100</p>
-                        </div>  
-                    </div>
-                </div>
 
-                <div class="product-card">
-                    <div class="seller">
-                        <div class="circle"></div>
-                        <p>Username</p>
-                    </div>
-                    <div class="product-image"><img src="Images/laptop1.jpg"></div>
-                    <div class="product-details">
-                        <h3>Product Name</h3>
-                        <h4>$100</h4>
-                        <p>Lightly Used</p>
-                        <div class="likes">   
-                            <img src="Images/heart(likes).svg" alt="Likes" class="like">
-                            <p>100</p>
-                        </div>  
-                    </div>
-                </div>
+        <div><p></p></div>
+        <div><p></p></div>
+        <div><p></p></div>
+        <div><p></p></div>
+        <div><p></p></div>
+        <div class="wrapper">
 
-                <div class="product-card">
-                    <div class="seller">
-                        <div class="circle"></div>
-                        <p>Username</p>
-                    </div>
-                    <div class="product-image"><img src="Images/laptop1.jpg"></div>
-                    <div class="product-details">
-                        <h3>Product Name</h3>
-                        <h4>$100</h4>
-                        <p>Lightly Used</p>
-                        <div class="likes">   
-                            <img src="Images/heart(likes).svg" alt="Likes" class="like">
-                            <p>100</p>
-                        </div>  
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="seller">
-                        <div class="circle"></div>
-                        <p>Username</p>
-                    </div>
-                    <div class="product-image"><img src="Images/laptop1.jpg"></div>
-                    <div class="product-details">
-                        <h3>Product Name</h3>
-                        <h4>$100</h4>
-                        <p>Lightly Used</p>
-                        <div class="likes">   
-                            <img src="Images/heart(likes).svg" alt="Likes" class="like">
-                            <p>100</p>
-                        </div>  
-                    </div>
-                </div>
-            </section>
-        </section>
-    </main>
+            <div id="buttons">
+                <button class="button-value"onclick="filterProduct('All')">All</button>
+                <button class="button-value"onclick="filterProduct('Computer & Tech')">Computer & Tech</button>
+                <button class="button-value"onclick="filterProduct('Mobile Phones & Gadgets')">Mobile Phones & Gadgets</button>
+                <button class="button-value"onclick="filterProduct('Video gamings')">Video gamings</button>
+                <button class="button-value"onclick="filterProduct('TV and home application')">TV and home application</button>
+            </div>
+            <div id="products"></div>
+        </div>
+        <script src="filter.js"></script>
+        <div class="product">
+            <div class="like-container">
+            
+          </div>
 
   <footer>
     <div class="footer-container">
@@ -162,5 +105,6 @@
   </footer>
 
   <script src="homepage.(afterlogin).js"></script>
+  <script src="filter.js"></script>
 </body>
 </html>
