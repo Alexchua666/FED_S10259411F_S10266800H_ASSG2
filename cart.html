@@ -1,11 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MokeSell - Cart</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="cart.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
 </head>
+
 <body>
-    
+  <div id="page" class="site">
+    <header>
+      <div class="header-container">
+          <a href="homepage(afterlogin).html" class="header-title">MokeSell</a>
+          <div class="categories">
+              <strong>Smartphones</strong>
+              <strong>Tablets</strong>
+              <strong>Laptops</strong>
+              <strong>Accessories</strong>
+          </div>
+
+          <div class="search-bar">
+              <input type="text" class="search-input" placeholder="Search items, brands, or categories">
+              <button class="search-button">Search</button>
+          </div>
+
+
+
+          <div class="actions">   
+              <a href="likes.html"><img src="Images/heart(likes).svg" alt="Likes"></a>
+              <a href="cart.html"><img src="Images/shoppingCart.svg" alt="shoppingCart"></a>
+              <img src="Images/notificationBell.svg" alt="notificationBell">
+              <a href="chats.html"><img src="Images/chat.svg" alt="chat"></a>                
+          </div> 
+        
+      </div>
+  </header>
+    <section id="cart" class="section-p1">
+        <table width=100%>
+            <thead>
+                <tr>
+                    <td>Remove</td>
+                    <td>Image</td>
+                    <td>Product</td>
+                    <td>price</td>
+                    <td>Quantity</td>
+                    <td>Subtotal</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+                    <td><img src="shirt.png" alt=""></td>
+                    <td>Happy Sailed Womens Summer Boho Floral</td>
+                    <td>$129.99</td>
+                    <td><input type="number" value="1"></td>
+                    <td>$129.99</td>
+                </tr>
+                <tr>
+                    <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+                    <td><img src="shoe.png" alt=""></td>
+                    <td>Men Slip On Shoes Casual with Arch Support</td>
+                    <td>$129.99</td>
+                    <td><input type="number" value="1"></td>
+                    <td>$129.99</td>
+                </tr>
+                <tr>
+                    <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+                    <td><img src="Dress.png" alt=""></td>
+                    <td>Black Women's Coat Dress</td>
+                    <td>$129.99</td>
+                    <td><input type="number" value="1"></td>
+                    <td>$129.99</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <div id="Subtotal">
+        <h3>Cart Totals</h3>
+        <table>
+            <tr>
+                <td>Cart Subtotal</td>
+                <td>$ 335</td>
+            </tr>
+            <tr>
+                <td>Shipping</td>
+                <td>Free</td>
+            </tr>
+            <tr>
+                <td><strong>Total</strong></td>
+                <td><strong>$ 335</strong></td>
+            </tr>
+        </table>
+        <button class=""normal>Proceed to checkout</button>
+    </div>
 </body>
-</html>
