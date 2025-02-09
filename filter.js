@@ -263,6 +263,25 @@ function filterProduct(value) {
         }
     });
 });
+
+
+for (let i of products.data) {
+    let card = document.createElement("div");
+    card.classList.add("card", i.category.replace(/ /g, "-").toLowerCase(), "hide");
+
+    // ... (your code to create image, name, price, usage, like elements) ...
+
+    // Make the entire card clickable and link to cart1.html
+    card.addEventListener("click", () => {
+        window.location.href = "cart1.html?product=" + encodeURIComponent(i.productName); // Include product name as a query parameter
+    });
+
+    document.getElementById("products").appendChild(card);
+}
+
+// ... (your filterProduct and search functions) ...
+
+// ... (rest of your JavaScript code)
 window.onload = () =>{
     filterProduct("all");
 };

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+    rel="stylesheet"
+    />
+    <link rel="stylesheet" href="filter.css"/>
+</head>
+<body>
+    <div class="wrapper">
+        <div id="search-container">
+            <input type="search" id="search-input"
+            placeholder="Search product name here.."
+            />
+            <button id="search">Search</button>
+        </div>
+        <div id="buttons">
+            <button class="button-value"onclick="filterProduct('All')">All</button>
+            <button class="button-value"onclick="filterProduct('Computer & Tech')">Computer & Tech</button>
+            <button class="button-value"onclick="filterProduct('Mobile Phones & Gadgets')">Mobile Phones & Gadgets</button>
+            <button class="button-value"onclick="filterProduct('Video gamings')">Video gamings</button>
+            <button class="button-value"onclick="filterProduct('TV and home application')">TV and home application</button>
+        </div>
+        <div id="products"></div>
+    </div>
+    <script src="filter.js"></script>
+    <div class="product">
+        <div class="like-container">
+        
+      </div>
+</body>
+</html>

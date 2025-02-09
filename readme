@@ -1,0 +1,47 @@
+# MokeSell E-commerce Website
+
+This project is a simple e-commerce website called MokeSell, featuring product listings, filtering, details, and a basic shopping cart functionality.
+
+## Project Overview
+
+MokeSell allows users to browse products, filter them by category, view product details, and add items to their cart.  The site uses dynamic content loading for product details and a modal for the shopping cart.
+
+## Features
+
+*   **Product Listings:** Displays products with images, names, prices, and usage information.
+*   **Category Filtering:** Allows users to filter products by category (All, Computer & Tech, Mobile Phones & Gadgets, Video Gamings, TV and Home Application).
+*   **Search Functionality:** Enables users to search for products by name.
+*   **Product Details:** Provides a dedicated page (`cart1.html`) to view detailed information about a specific product, including multiple images and key features.
+*   **Shopping Cart:** A modal-based shopping cart allows users to see the items they've added.  (Note:  Cart persistence and actual purchase functionality are not implemented in this version.)
+*   **Dynamic Content Loading:** Product details are loaded dynamically using JavaScript and fetched from a JSON file (`products.json`).
+*   **Image Carousel:** An image carousel on the homepage showcases featured products or promotions.
+*   **Like Functionality:** Users can "like" products, and the like count is displayed.
+
+## Technologies Used
+
+*   **HTML:** Structure and content of the web pages.
+*   **CSS:** Styling and layout.
+*   **JavaScript:** Dynamic functionality, including filtering, search, dynamic product details loading, and cart interaction.
+*   **Bootstrap:**  Used for responsive layout and pre-built UI components (modals, buttons, etc.).
+*   **Bootstrap Icons:** Provides icons for the user interface.
+*   **JSON:** Product data is stored and retrieved from a JSON file (`products.json`).
+
+## Setup and Installation
+
+1.  **Clone the Repository:** (If applicable)
+    ```bash
+    git clone [https://github.com/](https://github.com/)[your-username]/MokeSell.git  // Replace with your repository URL
+    ```
+2.  **Open `homepage.html`:** Open the `homepage.html` file in your web browser to view the website.
+
+## How to Use
+
+1.  **Browse Products:** The homepage displays a list of products.
+2.  **Filter Products:** Use the category buttons to filter the product listings.
+3.  **Search Products:** Enter a product name in the search bar and click "Search."
+4.  **View Product Details:** Click on a product card to view its details on the `cart1.html` page.
+5.  **Add to Cart:** On the product details page, click the "Add to Cart" button to add the product to your cart.
+6.  **View Cart:** Click the cart icon in the header to open the shopping cart modal.
+7.  **Like a Product:** Click the heart icon on a product card to like it.
+
+## File Structure

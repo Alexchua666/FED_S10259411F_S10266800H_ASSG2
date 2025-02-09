@@ -1,50 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MokeSell - Home</title>
-    <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
-    rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> 
     <link rel="stylesheet" href="filter.css"/>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"> 
+    
+
+    <style>
+        /* Add some basic styling for the cart icon */
+        .cart-icon {
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+        }
+    </style>
 </head>
 <body>
-    
     <header>
         <div class="header-container">
             <a href="homepage(afterlogin).html" class="header-title">MokeSell</a>
-                <div id="search-container">
-                    <input type="search" id="search-input"
-                    placeholder="Search items, brands, or categories"/>
-                    <button id="search">Search</button>
-                </div>
+            <div id="search-container">
+                <input type="search" id="search-input" placeholder="Search items, brands, or categories"/>
+                <button id="search">Search</button>
+            </div>
 
-            <div class="account">     
+            <div class="account">
                 <div class="profilepic"></div>
                 <strong>Username</strong>
                 <img src="Images/arrowdown.svg" alt="arrowdown" class="arrow">
                 <div class="dropdown">
-                    <a href="profile.html"><img src="Images/ProfilePerson.svg">Profile</a>
-                    <a href="purchases.html"><img src="Images/shoppingBag.svg">My Purchases</a>
-                    <a href="likes.html"><img src="Images/heart(likes).svg">Likes</a>
-                    <a href="settings.html"><img src="Images/Setting.svg">Settings</a>
+                    <a href="profile.html"><img src="images/ProfilePerson.svg">Profile</a>
+                    <a href="purchases.html"><img src="images/shoppingBag.svg">My Purchases</a>
+                    <a href="likes.html"><img src="images/heart(likes).svg">Likes</a>
+                    <a href="settings.html"><img src="images/Setting.svg">Settings</a>
                     <a href="homepage(prelogin).html"><img src="Images/Logout.svg">Logout</a>
                 </div>
             </div>
 
-            <div class="actions">   
-                <a href="likes.html"><img src="Images/heart(likes).svg" alt="Likes"></a>
-                <a href="cart.html"><img src="Images/shoppingCart.svg" alt="shoppingCart"></a>
-                <a href="chats.html"><img src="Images/chat.svg" alt="chat"></a>                
-            </div> 
+            <div class="actions">
+                <a href="likes.html"><img src="heart(likes) (1).svg" alt="Likes"></a>
+                <img src="shoppingCart (1).svg" alt="shoppingCart" class="cart-icon" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                <a href="chats.html"><img src="chat (1).svg" alt="chat"></a>
+            </div>
             <a href="listing.html"><button class="Sell">Sell</button></a>
         </div>
     </header>
-    
+
     <main class="main">
         <section class="advertisment">
             <button class="prev" id="prevBtn" onclick="prevImg()">&#10094;</button>
@@ -59,41 +65,110 @@
             <button class="next" id="nextBtn" onclick="nextImg()">&#10095;</button>
         </section>
 
-
-        <div><p></p></div>
-        <div><p></p></div>
-        <div><p></p></div>
-        <div><p></p></div>
-        <div><p></p></div>
         <div class="wrapper">
-
             <div id="buttons">
-                <button class="button-value"onclick="filterProduct('All')">All</button>
-                <button class="button-value"onclick="filterProduct('Computer & Tech')">Computer & Tech</button>
-                <button class="button-value"onclick="filterProduct('Mobile Phones & Gadgets')">Mobile Phones & Gadgets</button>
-                <button class="button-value"onclick="filterProduct('Video gamings')">Video gamings</button>
-                <button class="button-value"onclick="filterProduct('TV and home application')">TV and home application</button>
+                <button class="button-value" onclick="filterProduct('All')">All</button>
+                <button class="button-value" onclick="filterProduct('Computer & Tech')">Computer & Tech</button>
+                <button class="button-value" onclick="filterProduct('Mobile Phones & Gadgets')">Mobile Phones & Gadgets</button>
+                <button class="button-value" onclick="filterProduct('Video gamings')">Video gamings</button>
+                <button class="button-value" onclick="filterProduct('TV and home application')">TV and home application</button>
             </div>
             <div id="products"></div>
         </div>
         <script src="filter.js"></script>
-        <div class="product">
-            <div class="like-container">
-            
-          </div>
 
-  <footer>
-    <div class="footer-container">
-      <p>&copy; 2025 MokeSell. All rights reserved.</p>
-      <div class="footer-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
-        <a href="#">Contact Us</a>
-      </div>
+        <div class="container mt-5"> 
+            <div class="row">
+                <div class="col-md-6 mb-4"> 
+                    <div class="product-images">
+                     
+                            
+                    </div>
+                </div>
+
+                <div class="col-md-6"> 
+                    <div class="product-details">
+                        <h2></h2>
+                        <p></p>
+                       
+                         
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div> 
+
+    </main>
+
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Your Cart</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <table class="show-cart table"> </table>
+                    <div class="grand-total">Total price: ₹<span class="total-cart"></span></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
     </div>
-  </footer>
 
-  <script src="homepage.(afterlogin).js"></script>
-  <script src="filter.js"></script>
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2025 MokeSell. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="homepage.(afterlogin).js"></script>
+    <script src="filter.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> 
+  
+    // ... (Your existing code for modal and cart logic)
+
+ <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const showCart = urlParams.get('showCart');
+    
+    if (showCart === 'true') {
+        // Show the cart modal
+        const cartModal = new bootstrap.Modal(document.getElementById('staticBackdrop'));
+        cartModal.show();
+    
+        // Populate the cart table:
+        const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+        const cartTable = document.querySelector('.show-cart');
+        cartTable.innerHTML = ''; // Clear existing table rows
+    
+        cartItems.forEach(item => {
+            const row = cartTable.insertRow();
+            const nameCell = row.insertCell();
+            const priceCell = row.insertCell();
+            // ... add other cells as needed
+    
+            nameCell.textContent = item.productName;
+            priceCell.textContent = item.Price;
+            // ... add content to other cells
+        });
+    
+        // ... (Your code to calculate and display the total price)
+    }
+    
+    // Clear the showCart parameter from the URL after the modal is shown (optional but recommended)
+    if (showCart === 'true') {
+        const newUrl = window.location.href.replace('?showCart=true', '');
+        window.history.pushState(null, document.title, newUrl); // Change URL without reloading
+    }
+
+    </script>
 </body>
 </html>

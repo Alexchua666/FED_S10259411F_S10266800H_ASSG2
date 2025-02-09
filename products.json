@@ -1,0 +1,25 @@
+{
+    "data": [
+        {
+            "productName": "High-Performance Gaming PC",
+            "category": "Computer & Tech",
+            "Price": "200",
+            "Usage": "Lightly Used",
+            "image": "images/laptop1.jpg",
+            "otherImages": ["images/laptop1.jpg", "images/laptop2.jpg"],
+            "likeCount": 100,
+            "likeImage": "Images/heart(likes).svg"
+        },
+        {
+            "productName": "Latest Smartphone",
+            "category": "Mobile Phones & Gadgets",
+            "Price": "500",
+            "Usage": "Lightly Used",
+            "image": "images/phone1.jpg",
+            "otherImages": ["images/phone1.jpg", "images/phone2.jpg"], 
+            "likeCount": 100,
+            "likeImage": "Images/heart(likes).svg"
+        }
+
+    ]
+}
