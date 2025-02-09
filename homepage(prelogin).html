@@ -8,7 +8,7 @@
 </head>
 <body>
     <section class="popup">
-        <form class="login-form">
+        <form class="login-form" onsubmit="event.preventDefault(); window.location.href='homepage(afterlogin).html';">
             <div class="popup-header">
                 <h1>MokeSell</h1>
                 <img src="Images/'X' icon.png" alt="Close" class="close">
@@ -26,7 +26,7 @@
             <p>Don't have an account? <a href="#" class="switch-to-signup">Sign Up</a></p>
         </form>
 
-        <form class="signup-form">
+        <form class="signup-form" onsubmit="event.preventDefault(); window.location.href='homepage(afterlogin).html';">
             <div class="popup-header">
                 <h1>MokeSell</h1>
                 <img src="Images/'X' icon.png" alt="Close" class="close">
@@ -48,7 +48,7 @@
                 <input type="confirm_password" id="confirm_password" placeholder=" ">
                 <label for="confirm_password">Confirm Password</label>
             </div>
-            <button type="submit">Login</button>
+            <button type="submit">Sign Up</button>
             <p>Already have an account? <a href="#" class="switch-to-login">Login</a></p>
         </form>
     </section>
@@ -56,12 +56,6 @@
     <header>
         <div class="header-container">
             <div class="header-title">MokeSell</div>
-            <div class="categories">
-                <strong>Smartphones</strong>
-                <strong>Tablets</strong>
-                <strong>Laptops</strong>
-                <strong>Accessories</strong>
-            </div>
 
             <div class="search-bar">
                 <input type="text" class="search-input" placeholder="Search items, brands, or categories">
