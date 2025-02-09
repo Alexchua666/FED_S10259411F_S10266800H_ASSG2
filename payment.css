@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa, #e0e7ff);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    margin: 30px auto;
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+}
+
+.container .card {
+    width: 100%;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.btn.btn-primary {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    box-shadow: none;
+    border: none;
+    font-size: 16px;
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn.btn-primary:focus {
+    box-shadow: none;
+}
+
+.container .card .img-box {
+    width: 80px;
+    height: 50px;
+    margin: 0 auto;
+}
+
+.container .card img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.container .card .number {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.container .card-body .btn.btn-primary .fab.fa-cc-paypal {
+    font-size: 32px;
+    color: #3333f7;
+}
+
+.fab.fa-cc-amex {
+    color: #1c6acf;
+    font-size: 32px;
+}
+
+.fab.fa-cc-mastercard {
+    font-size: 32px;
+    color: red;
+}
+
+.fab.fa-cc-discover {
+    font-size: 32px;
+    color: orange;
+}
+
+.c-green {
+    color: green;
+}
+
+.box {
+    height: 40px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    border-radius: 8px;
+    color: white;
+    font-size: 18px;
+}
+
+.btn.btn-primary.payment,
+.btn.btn-primary.submit {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    border-radius: 8px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 24px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    width: 100%; /* Added for full width buttons */
+}
+
+.btn.btn-primary.payment:hover,
+.btn.btn-primary.submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.form__div {
+    height: 50px;
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.form-control {
+    width: 100%;
+    height: 45px;
+    font-size: 14px;
+    border: 1px solid #DADCE0;
+    border-radius: 8px;
+    outline: none;
+    padding: 10px;
+    background: none;
+    z-index: 1;
+    box-shadow: none;
+    transition: border-color 0.3s ease;
+}
+
+.form__label {
+    position: absolute;
+    left: 16px;
+    top: 10px;
+    background-color: #fff;
+    color: #80868B;
+    font-size: 14px;
+    transition: .3s;
+    text-transform: uppercase;
+    padding: 0 4px;
+}
+
+.form-control:focus+.form__label {
+    top: -8px;
+    left: 12px;
+    color: #1A73E8;
+    font-size: 12px;
+    font-weight: 500;
+    z-index: 10;
+}
+
+.form-control:not(:placeholder-shown).form-control:not(:focus)+.form__label {
+    top: -8px;
+    left: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    z-index: 10;
+}
+
+.form-control:focus {
+    border: 2px solid #1A73E8;
+    box-shadow: 0 0 8px rgba(26, 115, 232, 0.2);
+}
+.modal {
+    position: fixed; /* Stay in place */
+    top: 0;           /* At the top */
+    left: 0;          /* Go from the left edge to the right edge */
+    z-index: 1050;    /* Sit on top (higher than most other elements) */
+    width: 100%;      /* Full width */
+    height: 100%;     /* Full height */
+    overflow: auto;   /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+    display: flex;
+    align-items: center; /* Vertically center the modal */
+    justify-content: center; /* Horizontally center the modal */
+}
+
+.modal-dialog {
+    max-width: 500px; /* Adjust as needed */
+    margin: 0 auto; /* Center the dialog */
+}
+.header-title {
+    text-decoration: none; /* Removes the underline */
+    color: inherit; /* Inherits the color from the parent (optional) */
+    font-size: 24px; /* Example: Adjust font size as needed */
+    font-weight: bold; /* Example: Adjust font weight as needed */
+}
+
+/* Optional: Add hover effect */
+.header-title:hover {
+    color: #007bff; /* Example: Change color on hover */
+}
+/* Optional: Add some animation */
+.modal.fade .modal-dialog {
+    transform: translate(0, -25%); /* Start slightly above center */
+    transition: transform 0.3s ease-out; /* Smooth transition */
+}
+
+.modal.show .modal-dialog {
+    transform: translate(0, 0); /* Move to center */
+}
